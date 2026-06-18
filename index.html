@@ -5,35 +5,127 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 0.6875rem; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+    .font-epilogue {
+      font-family: "Epilogue", sans-serif;
+    }
   </style>
+   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
+<body class="h-screen font-epilogue flex flex-col">
+  <header class="flex items-center justify-between py-5 px-3 md:px-10">
+    <div class="flex gap-5">
+      <img src="./images/logo.svg" class="h-6" alt="">
+      <nav class="hidden md:flex md:gap-4">
+        <button class="flex items-center gap-2">
+          <span>Features</span>
+          <img src="./images/icon-arrow-down.svg" alt="">
+        </button>
+        <button class="flex items-center gap-2">
+          <span>Company</span>
+          <img src="./images/icon-arrow-down.svg" alt="">
+        </button>
+           <button class="flex items-center gap-2">
+          <span>Careers</span>
+        </button>
+           <button class="flex items-center gap-2">
+          <span>About</span>
+        </button>
+      </nav>
+    </div>
+    <button class="md:hidden">
+      <img src="./images/icon-menu.svg" alt="">
+    </button>
+    <div class="hidden md:flex md:gap-5">
+      <button>
+        Login
+      </button>
+      <button class="border-1 rounded-xl px-4 py-2">
+        Register
+      </button>
+    </div>
+  </header>
 
-  Features
-  Company
-  Careers
-  About
-
-  Login
-  Register
-
-  Make remote work
-
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
-
-  Learn more
-  
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </footer>
+<main class="md:flex md:flex-row-reverse md:items-center md:justify-center md:gap-16 md:my-auto md:px-5 md:h-2/3 md:mx-auto md:w-4/5">
+    <div class="mb-12 md:flex-1 md:mb-0 md:h-full">
+       <img src="./images/image-hero-mobile.png" class="md:h-full md:w-auto" alt="">
+    </div>
+    <div class="flex flex-col items-center md:items-start md:flex-1 md:h-full ">
+        <h1 class="text-4xl font-bold md:mb-5 md:text-[calc(.5rem+4vw)] text-center md:text-left">Make remote work</h1>
+        <p class="text-center my-6 px-3 font-semibold text-[#696969] md:text-2xl md:mb-5 md:text-left md:px-0">Get your team in sync, no matter your location. Streamline processes, 
+  create team rituals, and watch productivity soar.</p>
+        <button class="bg-[#141414] text-[#fafafa] px-5 py-3 rounded-xl text-center font-bold mb-12 md:mb-auto md:self-start">Learn more</button>
+        <div class="flex justify-between self-stretch px-3 mb-10 md:mb-0">
+            <img src="./images/client-databiz.svg" class="h-4" alt="">
+            <img src="./images/client-audiophile.svg" alt="" class="h-6" >
+            <img src="./images/client-meet.svg" alt="" class="h-4" >
+            <img src="./images/client-maker.svg" alt="" class="h-4" >
+        </div>
+    </div>
+  </main>
+  <dialog class="fixed h-full w-2/3 bg-white top-0 left-auto pt-5">
+    <div class="h-full flex flex-col">
+      <button class="self-end pr-7">
+        <img class="mb-2" src="./images/icon-close-menu.svg" alt="">
+      </button>
+      <div class="px-7">
+        <button class="text-[#696969] flex justify-center items-center gap-2">
+          <p class="font-medium">Features</p>
+          <img src="./images/icon-arrow-down.svg" alt="">
+        </button>
+        <div class="flex flex-col text-[#696969] font-medium px-5 py-5 gap-3">
+          <div class="flex items-center gap-2">
+            <img src="./images/icon-todo.svg" alt="">
+            <a>Todo List</a>
+          </div>
+           <div class="flex items-center gap-2">
+            <img src="./images/icon-calendar.svg" alt="">
+            <a>Calender</a>
+          </div>
+           <div class="flex items-center gap-2">
+            <img src="./images/icon-reminders.svg" alt="">
+            <a>Reminders</a>
+          </div>
+           <div class="flex items-center gap-2">
+            <img src="./images/icon-planning.svg" alt="">
+            <a>Planning</a>
+          </div>
+        </div>
+      </div>
+       <div class="px-7">
+        <button class="text-[#696969] flex justify-center items-center gap-2">
+          <p class="font-medium">Company</p>
+          <img src="./images/icon-arrow-down.svg" alt="">
+        </button>
+        <div class="flex flex-col text-[#696969] font-medium px-5 py-5 gap-3">
+          <div class="flex items-center gap-2">
+            <a>History</a>
+          </div>
+           <div class="flex items-center gap-2">
+            <a>Our Team</a>
+          </div>
+           <div class="flex items-center gap-2">
+            <a>Blog</a>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col px-7 text-[#696969] font-medium gap-5 mb-5">
+        <a>Careers</a>
+        <a>About</a>
+      </div>
+      <div class="flex flex-col items-center gap-3 font-medium">
+        <button class="text-[#696969]">Login</button>
+        <button class="border-1 border-[#696969] text-[#696969] px-12 py-1 rounded-lg">Register</button>
+      </div>
+    </div>
+  </dialog>
 </body>
 </html>

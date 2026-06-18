@@ -13,9 +13,9 @@ The designs were created to the following widths:
 
 ### Neutral
 
-- Gray 50: hsl(0, 0%, 98%)
-- Gray 500: hsl(0, 0%, 41%)
-- Gray 950: hsl(0, 0%, 8%)
+- Gray 50: hsl(0, 0%, 98%) / #fafafa
+- Gray 500: hsl(0, 0%, 41%) / #696969
+- Gray 950: hsl(0, 0%, 8%) / #141414
 
 ## Typography
 
