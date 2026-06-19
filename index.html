@@ -22,14 +22,18 @@
 </head>
 <body class="h-screen font-epilogue flex flex-col">
   <header class="flex items-center justify-between py-5 px-3 md:px-10">
-    <div class="flex gap-5">
+    <div class="flex gap-10">
       <img src="./images/logo.svg" class="h-6" alt="">
-      <nav class="hidden md:flex md:gap-4">
-        <button class="flex items-center gap-2">
+      <nav class="hidden md:flex md:gap-7">
+        <button class="flex items-center gap-2"
+        id="pc-features-button"
+        >
           <span>Features</span>
           <img src="./images/icon-arrow-down.svg" alt="">
         </button>
-        <button class="flex items-center gap-2">
+        <button class="flex items-center gap-2"
+        id="pc-company-button"
+        >
           <span>Company</span>
           <img src="./images/icon-arrow-down.svg" alt="">
         </button>
@@ -41,7 +45,9 @@
         </button>
       </nav>
     </div>
-    <button class="md:hidden">
+    <button class="md:hidden"
+      id="mobile-hamburger-button"
+    >
       <img src="./images/icon-menu.svg" alt="">
     </button>
     <div class="hidden md:flex md:gap-5">
@@ -51,6 +57,43 @@
       <button class="border-1 rounded-xl px-4 py-2">
         Register
       </button>
+    </div>
+    <div class="hidden absolute shadow-[0_0_15px_rgba(0,0,0,0.2)] rounded-md top-18 bg-white left-15 px-4 "
+    id="pc-features-dropdown"
+    >
+      <div class="flex flex-col text-[#696969] font-medium px-5 py-5 gap-5">
+        <div class="flex items-center gap-2">
+          <img src="./images/icon-todo.svg" alt="">
+          <a>Todo List</a>
+        </div>
+        <div class="flex items-center gap-2">
+          <img src="./images/icon-calendar.svg" alt="">
+          <a>Calender</a>
+        </div>
+        <div class="flex items-center gap-2">
+          <img src="./images/icon-reminders.svg" alt="">
+          <a>Reminders</a>
+        </div>
+        <div class="flex items-center gap-2">
+          <img src="./images/icon-planning.svg" alt="">
+          <a>Planning</a>
+        </div>
+      </div>
+    </div>
+    <div class="hidden absolute shadow-[0_0_15px_rgba(0,0,0,0.2)] rounded-md top-18 bg-white left-70 px-4"
+    id="pc-company-dropdown"
+    >
+      <div class="flex flex-col text-[#696969] font-medium px-5 py-5 gap-5">
+        <div class="flex items-center gap-2">
+          <a>History</a>
+        </div>
+        <div class="flex items-center gap-2">
+          <a>Our Team</a>
+        </div>
+        <div class="flex items-center gap-2">
+          <a>Blog</a>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -62,7 +105,7 @@
         <h1 class="text-4xl font-bold md:mb-5 md:text-[calc(.5rem+4vw)] text-center md:text-left">Make remote work</h1>
         <p class="text-center my-6 px-3 font-semibold text-[#696969] md:text-2xl md:mb-5 md:text-left md:px-0">Get your team in sync, no matter your location. Streamline processes, 
   create team rituals, and watch productivity soar.</p>
-        <button class="bg-[#141414] text-[#fafafa] px-5 py-3 rounded-xl text-center font-bold mb-12 md:mb-auto md:self-start">Learn more</button>
+        <button class="bg-[#141414] text-[#fafafa] px-5 py-3 rounded-xl text-center font-bold mb-12 md:mb-auto md:self-start hover:bg-transparent hover:border-1  hover:text-[#141414]">Learn more</button>
         <div class="flex justify-between self-stretch px-3 mb-10 md:mb-0">
             <img src="./images/client-databiz.svg" class="h-4" alt="">
             <img src="./images/client-audiophile.svg" alt="" class="h-6" >
@@ -71,17 +114,25 @@
         </div>
     </div>
   </main>
-  <dialog class="fixed h-full w-2/3 bg-white top-0 left-auto pt-5">
+  <dialog class="fixed h-full w-2/3 bg-white top-0 left-auto pt-5"
+    id="mobile-nav"
+  >
     <div class="h-full flex flex-col">
-      <button class="self-end pr-7">
+      <button class="self-end pr-7"
+      id="mobile-close-button"
+      >
         <img class="mb-2" src="./images/icon-close-menu.svg" alt="">
       </button>
       <div class="px-7">
-        <button class="text-[#696969] flex justify-center items-center gap-2">
+        <button class="text-[#696969] flex justify-center items-center gap-2"
+        id="mobile-features-button"
+        >
           <p class="font-medium">Features</p>
           <img src="./images/icon-arrow-down.svg" alt="">
         </button>
-        <div class="flex flex-col text-[#696969] font-medium px-5 py-5 gap-3">
+        <div class="hidden flex flex-col text-[#696969] font-medium px-5 py-5 gap-3"
+        id="mobile-features-dropdown"
+        >
           <div class="flex items-center gap-2">
             <img src="./images/icon-todo.svg" alt="">
             <a>Todo List</a>
@@ -101,11 +152,15 @@
         </div>
       </div>
        <div class="px-7">
-        <button class="text-[#696969] flex justify-center items-center gap-2">
+        <button class="text-[#696969] flex justify-center items-center gap-2"
+        id="mobile-company-button"
+        >
           <p class="font-medium">Company</p>
           <img src="./images/icon-arrow-down.svg" alt="">
         </button>
-        <div class="flex flex-col text-[#696969] font-medium px-5 py-5 gap-3">
+        <div class="hidden flex flex-col text-[#696969] font-medium px-5 py-5 gap-3"
+        id="mobile-company-dropdown"
+        >
           <div class="flex items-center gap-2">
             <a>History</a>
           </div>
@@ -127,5 +182,7 @@
       </div>
     </div>
   </dialog>
+
+  <script src="index.js"></script>
 </body>
 </html>
